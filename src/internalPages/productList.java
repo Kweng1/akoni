@@ -67,9 +67,9 @@ public class productList extends javax.swing.JInternalFrame {
     }
     
     
-     Color navcolor= new Color(0,204,204);
-    Color headcolor= new Color(0,255,204);
-    Color bodycolor = new Color(0,204,102);
+     Color navcolor= new Color(217,222,135);
+    Color headcolor= new Color(222,140,135);
+    Color bodycolor = new Color(222,184,135);
     
 
   
@@ -107,7 +107,7 @@ public class productList extends javax.swing.JInternalFrame {
 
         setPreferredSize(new java.awt.Dimension(736, 436));
 
-        jPanel1.setBackground(new java.awt.Color(1, 121, 111));
+        jPanel1.setBackground(new java.awt.Color(222, 184, 135));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
@@ -115,7 +115,7 @@ public class productList extends javax.swing.JInternalFrame {
         jLabel1.setText("PRODUCT LIST");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 700, 30));
 
-        update.setBackground(new java.awt.Color(0, 255, 204));
+        update.setBackground(new java.awt.Color(222, 140, 135));
         update.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 updateMouseClicked(evt);
@@ -129,6 +129,7 @@ public class productList extends javax.swing.JInternalFrame {
         });
         update.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel4.setBackground(new java.awt.Color(222, 141, 135));
         jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("UPDATE");
@@ -146,7 +147,7 @@ public class productList extends javax.swing.JInternalFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 330, 320));
 
-        delete.setBackground(new java.awt.Color(0, 255, 204));
+        delete.setBackground(new java.awt.Color(222, 140, 135));
         delete.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 deleteMouseClicked(evt);
@@ -160,6 +161,7 @@ public class productList extends javax.swing.JInternalFrame {
         });
         delete.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel7.setBackground(new java.awt.Color(222, 141, 135));
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("DELETE");
@@ -167,15 +169,15 @@ public class productList extends javax.swing.JInternalFrame {
 
         jPanel1.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 80, 30));
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("MEDIUM:");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 90, 30));
 
-        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel6.setText("ID:");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 40, 30));
 
-        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel8.setText("SMALL:");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 70, 30));
 
@@ -189,7 +191,7 @@ public class productList extends javax.swing.JInternalFrame {
         pname.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(pname, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 220, 30));
 
-        clear.setBackground(new java.awt.Color(0, 255, 204));
+        clear.setBackground(new java.awt.Color(222, 140, 135));
         clear.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 clearMouseClicked(evt);
@@ -203,7 +205,7 @@ public class productList extends javax.swing.JInternalFrame {
         });
         clear.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setBackground(new java.awt.Color(153, 153, 153));
+        jLabel10.setBackground(new java.awt.Color(222, 141, 135));
         jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("CLEAR");
@@ -211,7 +213,7 @@ public class productList extends javax.swing.JInternalFrame {
 
         jPanel1.add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 80, 30));
 
-        print.setBackground(new java.awt.Color(0, 255, 204));
+        print.setBackground(new java.awt.Color(222, 140, 135));
         print.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 printMouseClicked(evt);
@@ -237,7 +239,7 @@ public class productList extends javax.swing.JInternalFrame {
         ps.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(ps, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 170, 220, 30));
 
-        refresh.setBackground(new java.awt.Color(0, 255, 204));
+        refresh.setBackground(new java.awt.Color(222, 140, 135));
         refresh.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 refreshMouseClicked(evt);
@@ -259,7 +261,7 @@ public class productList extends javax.swing.JInternalFrame {
 
         jPanel1.add(refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, 80, 30));
 
-        jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel13.setText("Name: ");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 70, 30));
 
@@ -273,12 +275,12 @@ public class productList extends javax.swing.JInternalFrame {
         pl.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(pl, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 220, 30));
 
-        jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel12.setText("LARGE:");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 80, 30));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 700, 10));
 
-        add.setBackground(new java.awt.Color(0, 255, 204));
+        add.setBackground(new java.awt.Color(222, 140, 135));
         add.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addMouseClicked(evt);
@@ -292,6 +294,7 @@ public class productList extends javax.swing.JInternalFrame {
         });
         add.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel5.setBackground(new java.awt.Color(222, 141, 135));
         jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("ADD");
@@ -318,7 +321,7 @@ public class productList extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_clearMouseExited
 
     private void clearMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clearMouseEntered
-         clear.setBackground(bodycolor);
+         clear.setBackground(navcolor);
     }//GEN-LAST:event_clearMouseEntered
 
     private void clearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clearMouseClicked
@@ -337,7 +340,7 @@ public class productList extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_deleteMouseExited
 
     private void deleteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteMouseEntered
-        delete.setBackground(bodycolor);
+        delete.setBackground(navcolor);
     }//GEN-LAST:event_deleteMouseEntered
 
     private void deleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteMouseClicked
@@ -364,7 +367,7 @@ public class productList extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_updateMouseExited
 
     private void updateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateMouseEntered
-        update.setBackground(bodycolor);
+        update.setBackground(navcolor);
     }//GEN-LAST:event_updateMouseEntered
 
     private void updateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateMouseClicked
@@ -420,7 +423,7 @@ model.setColumnIdentifiers(columnIdentifiers);
     }//GEN-LAST:event_printMouseClicked
 
     private void printMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_printMouseEntered
-        print.setBackground(bodycolor);
+        print.setBackground(navcolor);
     }//GEN-LAST:event_printMouseEntered
        
     private void printMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_printMouseExited
@@ -434,7 +437,7 @@ model.setColumnIdentifiers(columnIdentifiers);
     }//GEN-LAST:event_refreshMouseClicked
 
     private void refreshMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refreshMouseEntered
-       refresh.setBackground(bodycolor);
+       refresh.setBackground(navcolor);
     }//GEN-LAST:event_refreshMouseEntered
 
     private void refreshMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refreshMouseExited
@@ -456,7 +459,7 @@ model.setColumnIdentifiers(columnIdentifiers);
     }//GEN-LAST:event_addMouseClicked
 
     private void addMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseEntered
-        add.setBackground(bodycolor);
+        add.setBackground(navcolor);
     }//GEN-LAST:event_addMouseEntered
 
     private void addMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseExited

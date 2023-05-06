@@ -64,9 +64,9 @@ public class orderinfo extends javax.swing.JInternalFrame {
         
     }
     
-     Color navcolor= new Color(0,204,204);
-    Color headcolor= new Color(0,255,204);
-    Color bodycolor = new Color(0,204,102);
+     Color navcolor= new Color(217,222,135);
+    Color headcolor= new Color(222,140,135);
+    Color bodycolor = new Color(222,184,135);
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -79,7 +79,6 @@ public class orderinfo extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        searchbar = new javax.swing.JTextField();
         search = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         refresh = new javax.swing.JPanel();
@@ -90,29 +89,19 @@ public class orderinfo extends javax.swing.JInternalFrame {
         order_table = new javax.swing.JTable();
         logout = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
+        searchbar = new javax.swing.JTextField();
 
         setPreferredSize(new java.awt.Dimension(736, 436));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(1, 121, 111));
+        jPanel1.setBackground(new java.awt.Color(222, 184, 135));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("DELIVERY INFORMATION");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
-        searchbar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        searchbar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        searchbar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        searchbar.setOpaque(false);
-        searchbar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchbarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(searchbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, 620, 30));
-
-        search.setBackground(new java.awt.Color(0, 255, 204));
+        search.setBackground(new java.awt.Color(222, 140, 135));
         search.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         search.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -132,9 +121,9 @@ public class orderinfo extends javax.swing.JInternalFrame {
         jLabel5.setText("SEARCH");
         search.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 30));
 
-        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 50, 80, 30));
+        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 40, 80, 30));
 
-        refresh.setBackground(new java.awt.Color(0, 255, 204));
+        refresh.setBackground(new java.awt.Color(222, 140, 135));
         refresh.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 refreshMouseClicked(evt);
@@ -169,7 +158,7 @@ public class orderinfo extends javax.swing.JInternalFrame {
 
         jPanel1.add(refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 380, 80, -1));
 
-        print.setBackground(new java.awt.Color(0, 255, 204));
+        print.setBackground(new java.awt.Color(222, 140, 135));
         print.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 printMouseClicked(evt);
@@ -213,7 +202,7 @@ public class orderinfo extends javax.swing.JInternalFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 690, 270));
 
-        logout.setBackground(new java.awt.Color(0, 255, 204));
+        logout.setBackground(new java.awt.Color(222, 140, 135));
         logout.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 logoutMouseClicked(evt);
@@ -233,14 +222,20 @@ public class orderinfo extends javax.swing.JInternalFrame {
 
         jPanel1.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 380, 80, 30));
 
+        searchbar.setBackground(new java.awt.Color(222, 184, 135));
+        searchbar.setText("Enter Search here...");
+        searchbar.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
+        searchbar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                searchbarMouseEntered(evt);
+            }
+        });
+        jPanel1.add(searchbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(289, 40, 330, 30));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void searchbarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchbarActionPerformed
-        searchbar.setText(null);
-    }//GEN-LAST:event_searchbarActionPerformed
 
     private void searchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchMouseClicked
       DefaultTableModel model = (DefaultTableModel) order_table.getModel();
@@ -251,7 +246,7 @@ public class orderinfo extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_searchMouseClicked
 
     private void searchMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchMouseEntered
-        search.setBackground(bodycolor);
+        search.setBackground(navcolor);
     }//GEN-LAST:event_searchMouseEntered
 
     private void searchMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchMouseExited
@@ -264,7 +259,7 @@ public class orderinfo extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_refreshMouseClicked
 
     private void refreshMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refreshMouseEntered
-      refresh.setBackground(bodycolor);
+      refresh.setBackground(navcolor);
     }//GEN-LAST:event_refreshMouseEntered
 
     private void refreshMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refreshMouseExited
@@ -287,7 +282,7 @@ public class orderinfo extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_printMouseClicked
 
     private void printMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_printMouseEntered
-        print.setBackground(bodycolor);
+        print.setBackground(navcolor);
     }//GEN-LAST:event_printMouseEntered
 
     private void printMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_printMouseExited
@@ -308,12 +303,16 @@ public class orderinfo extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_logoutMouseClicked
 
     private void logoutMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseEntered
-        logout.setBackground(bodycolor);
+        logout.setBackground(navcolor);
     }//GEN-LAST:event_logoutMouseEntered
 
     private void logoutMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseExited
        logout.setBackground(headcolor);
     }//GEN-LAST:event_logoutMouseExited
+
+    private void searchbarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchbarMouseEntered
+       searchbar.setText(null);
+    }//GEN-LAST:event_searchbarMouseEntered
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

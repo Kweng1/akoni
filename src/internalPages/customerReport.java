@@ -70,9 +70,9 @@ public class customerReport extends javax.swing.JInternalFrame {
     }
     
     
-     Color navcolor= new Color(0,204,204);
-    Color headcolor= new Color(0,255,204);
-    Color bodycolor = new Color(0,204,102);
+     Color navcolor= new Color(217,222,135);
+    Color headcolor= new Color(222,140,135);
+    Color bodycolor = new Color(222,184,135);
     
 
   
@@ -86,7 +86,6 @@ public class customerReport extends javax.swing.JInternalFrame {
         jLabel4 = new javax.swing.JLabel();
         search = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        searchbar = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         customer_tbl = new javax.swing.JTable();
         delete = new javax.swing.JPanel();
@@ -118,17 +117,18 @@ public class customerReport extends javax.swing.JInternalFrame {
         Quantity1 = new javax.swing.JLabel();
         add = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
+        searchbar = new javax.swing.JTextField();
 
         setPreferredSize(new java.awt.Dimension(736, 436));
 
-        jPanel1.setBackground(new java.awt.Color(1, 121, 111));
+        jPanel1.setBackground(new java.awt.Color(222, 184, 135));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("COSTUMER REPORT");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 240, 20));
 
-        update.setBackground(new java.awt.Color(0, 255, 204));
+        update.setBackground(new java.awt.Color(222, 140, 135));
         update.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 updateMouseClicked(evt);
@@ -147,9 +147,9 @@ public class customerReport extends javax.swing.JInternalFrame {
         jLabel4.setText("UPDATE");
         update.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 30));
 
-        jPanel1.add(update, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 80, 80, 30));
+        jPanel1.add(update, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 100, 80, 30));
 
-        search.setBackground(new java.awt.Color(0, 255, 204));
+        search.setBackground(new java.awt.Color(222, 140, 135));
         search.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         search.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -169,18 +169,7 @@ public class customerReport extends javax.swing.JInternalFrame {
         jLabel5.setText("SEARCH");
         search.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 30));
 
-        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 30, 80, 30));
-
-        searchbar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        searchbar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        searchbar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        searchbar.setOpaque(false);
-        searchbar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                searchbarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(searchbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 570, 30));
+        jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 40, 80, 30));
 
         customer_tbl.setBackground(new java.awt.Color(0, 204, 204));
         customer_tbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -190,9 +179,9 @@ public class customerReport extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(customer_tbl);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 450, 170));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 450, 150));
 
-        delete.setBackground(new java.awt.Color(0, 255, 204));
+        delete.setBackground(new java.awt.Color(222, 140, 135));
         delete.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 deleteMouseClicked(evt);
@@ -211,7 +200,7 @@ public class customerReport extends javax.swing.JInternalFrame {
         jLabel7.setText("DELETE");
         delete.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 30));
 
-        jPanel1.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 80, 30));
+        jPanel1.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 150, 80, 30));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Contact No.");
@@ -235,7 +224,7 @@ public class customerReport extends javax.swing.JInternalFrame {
         cname.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(cname, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 280, 220, 20));
 
-        clear.setBackground(new java.awt.Color(0, 255, 204));
+        clear.setBackground(new java.awt.Color(222, 140, 135));
         clear.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 clearMouseClicked(evt);
@@ -255,9 +244,9 @@ public class customerReport extends javax.swing.JInternalFrame {
         jLabel10.setText("CLEAR");
         clear.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 30));
 
-        jPanel1.add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, 80, 30));
+        jPanel1.add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 200, 80, 30));
 
-        print.setBackground(new java.awt.Color(0, 255, 204));
+        print.setBackground(new java.awt.Color(222, 140, 135));
         print.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 printMouseClicked(evt);
@@ -276,14 +265,14 @@ public class customerReport extends javax.swing.JInternalFrame {
         jLabel3.setText("PRINT");
         print.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 30));
 
-        jPanel1.add(print, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 180, 80, 30));
+        jPanel1.add(print, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 200, 80, 30));
 
         cadd.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         cadd.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cadd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.add(cadd, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 220, 20));
 
-        refresh.setBackground(new java.awt.Color(0, 255, 204));
+        refresh.setBackground(new java.awt.Color(222, 140, 135));
         refresh.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 refreshMouseClicked(evt);
@@ -303,7 +292,7 @@ public class customerReport extends javax.swing.JInternalFrame {
         REFRESH.setText("REFRESH");
         refresh.add(REFRESH, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 30));
 
-        jPanel1.add(refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 130, 80, 30));
+        jPanel1.add(refresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 150, 80, 30));
 
         jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel13.setText("Name: ");
@@ -350,7 +339,7 @@ public class customerReport extends javax.swing.JInternalFrame {
         jLabel15.setText("Price:");
         jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 60, 20));
 
-        jButton1.setBackground(new java.awt.Color(0, 255, 204));
+        jButton1.setBackground(new java.awt.Color(222, 140, 135));
         jButton1.setText("CALCULATE");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -368,7 +357,7 @@ public class customerReport extends javax.swing.JInternalFrame {
         Quantity1.setText("Quantity:");
         jPanel1.add(Quantity1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, 80, 20));
 
-        add.setBackground(new java.awt.Color(0, 255, 204));
+        add.setBackground(new java.awt.Color(222, 140, 135));
         add.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 addMouseClicked(evt);
@@ -387,7 +376,17 @@ public class customerReport extends javax.swing.JInternalFrame {
         jLabel14.setText("ADD");
         add.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 80, 30));
 
-        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, 80, 30));
+        jPanel1.add(add, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 100, 80, 30));
+
+        searchbar.setBackground(new java.awt.Color(222, 184, 135));
+        searchbar.setText("Enter Search Here...");
+        searchbar.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
+        searchbar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                searchbarMouseEntered(evt);
+            }
+        });
+        jPanel1.add(searchbar, new org.netbeans.lib.awtextra.AbsoluteConstraints(259, 40, 340, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -412,7 +411,7 @@ public class customerReport extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_searchMouseClicked
 
     private void searchMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchMouseEntered
-        search.setBackground(bodycolor);
+        search.setBackground(navcolor);
     }//GEN-LAST:event_searchMouseEntered
 
     private void searchMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchMouseExited
@@ -424,7 +423,7 @@ public class customerReport extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_clearMouseExited
 
     private void clearMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clearMouseEntered
-         clear.setBackground(bodycolor);
+         clear.setBackground(navcolor);
     }//GEN-LAST:event_clearMouseEntered
 
     private void clearMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clearMouseClicked
@@ -446,7 +445,7 @@ public class customerReport extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_deleteMouseExited
 
     private void deleteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteMouseEntered
-        delete.setBackground(bodycolor);
+        delete.setBackground(navcolor);
     }//GEN-LAST:event_deleteMouseEntered
 
     private void deleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteMouseClicked
@@ -473,7 +472,7 @@ public class customerReport extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_updateMouseExited
 
     private void updateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateMouseEntered
-        update.setBackground(bodycolor);
+        update.setBackground(navcolor);
     }//GEN-LAST:event_updateMouseEntered
 
     private void updateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_updateMouseClicked
@@ -531,16 +530,12 @@ public class customerReport extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_printMouseClicked
 
     private void printMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_printMouseEntered
-        print.setBackground(bodycolor);
+        print.setBackground(navcolor);
     }//GEN-LAST:event_printMouseEntered
        
     private void printMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_printMouseExited
         print.setBackground(headcolor);
     }//GEN-LAST:event_printMouseExited
-
-    private void searchbarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchbarActionPerformed
-       searchbar.setText(null);
-    }//GEN-LAST:event_searchbarActionPerformed
 
     private void refreshMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refreshMouseClicked
           displayData();
@@ -549,7 +544,7 @@ public class customerReport extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_refreshMouseClicked
 
     private void refreshMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refreshMouseEntered
-       refresh.setBackground(bodycolor);
+       refresh.setBackground(navcolor);
     }//GEN-LAST:event_refreshMouseEntered
 
     private void refreshMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_refreshMouseExited
@@ -574,12 +569,16 @@ public class customerReport extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_addMouseClicked
 
     private void addMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseEntered
-         add.setBackground(bodycolor);
+         add.setBackground(navcolor);
     }//GEN-LAST:event_addMouseEntered
 
     private void addMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseExited
           add.setBackground(headcolor);
     }//GEN-LAST:event_addMouseExited
+
+    private void searchbarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_searchbarMouseEntered
+         searchbar.setText(null);
+    }//GEN-LAST:event_searchbarMouseEntered
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -43,17 +43,9 @@ public class registerform extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        firstname = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        lastname = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        email = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        username = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         fname1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -71,71 +63,44 @@ public class registerform extends javax.swing.JFrame {
         time2 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
         time3 = new javax.swing.JTextField();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        firstname = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        lastname = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        email = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
+        username = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        confirm = new javax.swing.JPasswordField();
         password = new javax.swing.JPasswordField();
-        create = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        confirm = new javax.swing.JPasswordField();
         cancel = new javax.swing.JButton();
-        click = new javax.swing.JLabel();
+        create = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(1, 121, 111));
+        jPanel1.setBackground(new java.awt.Color(222, 184, 135));
         jPanel1.setLayout(null);
 
-        firstname.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jPanel1.add(firstname);
-        firstname.setBounds(560, 90, 280, 30);
-
-        jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel2.setText("First Name:");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(340, 90, 100, 20);
-
-        jPanel2.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel2.setBackground(new java.awt.Color(222, 140, 135));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setBackground(new java.awt.Color(0, 153, 153));
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setBackground(new java.awt.Color(222, 140, 135));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel1.setText("REGISTER FORM");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 1000, 60));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1000, 40));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/336646233_233690649040631_419670.png"))); // NOI18N
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 0, -1, 40));
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(0, 0, 940, 60);
-
-        jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel3.setText("Last Name:");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(340, 140, 100, 20);
-
-        lastname.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jPanel1.add(lastname);
-        lastname.setBounds(560, 140, 280, 30);
-
-        jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel4.setText("Confirm Password:");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(340, 330, 180, 20);
-
-        email.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jPanel1.add(email);
-        email.setBounds(560, 190, 280, 30);
-
-        jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel9.setText("Email:");
-        jPanel1.add(jLabel9);
-        jLabel9.setBounds(340, 190, 150, 20);
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/336646233_233690649040631_4196703286668098395_n-removebg-preview.png"))); // NOI18N
-        jPanel1.add(jLabel8);
-        jLabel8.setBounds(10, 120, 310, 290);
-
-        username.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jPanel1.add(username);
-        username.setBounds(560, 240, 280, 30);
+        jPanel2.setBounds(0, 0, 940, 40);
 
         jPanel3.setBackground(new java.awt.Color(1, 121, 111));
         jPanel3.setLayout(null);
@@ -245,57 +210,97 @@ public class registerform extends javax.swing.JFrame {
         jPanel1.add(jPanel3);
         jPanel3.setBounds(0, 0, 0, 0);
 
-        jLabel17.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        jPanel5.setBackground(new java.awt.Color(0, 0, 0, 80));
+        jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(217, 222, 135));
+        jLabel2.setText("First Name:");
+        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 100, 20));
+
+        firstname.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        firstname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        firstname.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel5.add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 24, 280, 30));
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(217, 222, 135));
+        jLabel3.setText("Last Name:");
+        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 100, 20));
+
+        lastname.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        lastname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        lastname.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel5.add(lastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 74, 280, 30));
+
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(217, 222, 135));
+        jLabel9.setText("Email:");
+        jPanel5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 150, 20));
+
+        email.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        email.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        email.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel5.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 124, 280, 30));
+
+        jLabel17.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(217, 222, 135));
         jLabel17.setText("Username:");
-        jPanel1.add(jLabel17);
-        jLabel17.setBounds(340, 240, 100, 20);
+        jPanel5.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 100, 20));
 
-        jLabel18.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        username.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        username.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        username.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel5.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 174, 280, 30));
+
+        jLabel18.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(217, 222, 135));
         jLabel18.setText("Password:");
-        jPanel1.add(jLabel18);
-        jLabel18.setBounds(340, 280, 100, 20);
-        jPanel1.add(confirm);
-        confirm.setBounds(560, 340, 280, 30);
-        jPanel1.add(password);
-        password.setBounds(560, 290, 280, 30);
+        jPanel5.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 100, 20));
 
-        create.setBackground(new java.awt.Color(102, 255, 204));
-        create.setText("CREATE");
-        create.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                createActionPerformed(evt);
-            }
-        });
-        jPanel1.add(create);
-        create.setBounds(730, 380, 110, 30);
+        password.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        password.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel5.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 224, 280, 30));
 
-        cancel.setBackground(new java.awt.Color(102, 255, 204));
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(217, 222, 135));
+        jLabel4.setText("Confirm Password:");
+        jPanel5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, 180, 20));
+
+        confirm.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        confirm.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel5.add(confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(208, 274, 280, 30));
+
+        cancel.setBackground(new java.awt.Color(222, 141, 135));
         cancel.setText("CANCEL");
         cancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelActionPerformed(evt);
             }
         });
-        jPanel1.add(cancel);
-        cancel.setBounds(560, 380, 110, 30);
+        jPanel5.add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(226, 315, 110, 30));
 
-        click.setBackground(new java.awt.Color(255, 255, 255));
-        click.setFont(new java.awt.Font("Century Gothic", 3, 14)); // NOI18N
-        click.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        click.setText("Click here to login");
-        click.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                clickMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                clickMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                clickMouseExited(evt);
+        create.setBackground(new java.awt.Color(222, 141, 135));
+        create.setText("CREATE");
+        create.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createActionPerformed(evt);
             }
         });
-        jPanel1.add(click);
-        click.setBounds(620, 420, 190, 30);
+        jPanel5.add(create, new org.netbeans.lib.awtextra.AbsoluteConstraints(367, 314, 110, 30));
+
+        jPanel1.add(jPanel5);
+        jPanel5.setBounds(20, 80, 540, 360);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/401711.jpg"))); // NOI18N
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(0, 40, 580, 430);
+
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/1laptop-removebg-preview (1).png"))); // NOI18N
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(580, 90, 350, 350);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -395,20 +400,6 @@ try {
        this.dispose();
     }//GEN-LAST:event_cancelActionPerformed
 
-    private void clickMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clickMouseClicked
-        this.dispose();
-        loginForm sp = new loginForm();
-        sp.setVisible(true);
-    }//GEN-LAST:event_clickMouseClicked
-
-    private void clickMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clickMouseEntered
-        click.setBackground(bodycolor);
-    }//GEN-LAST:event_clickMouseEntered
-
-    private void clickMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clickMouseExited
-        click.setBackground(bodycolor);
-    }//GEN-LAST:event_clickMouseExited
-
      public boolean  checkUsername(String username)
     {
          PreparedStatement ps;      
@@ -468,7 +459,6 @@ try {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancel;
     private javax.swing.JPanel cancel1;
-    private javax.swing.JLabel click;
     private javax.swing.JPasswordField confirm;
     private javax.swing.JButton create;
     private javax.swing.JPanel create1;
@@ -490,12 +480,15 @@ try {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JTextField lastname;
     private javax.swing.JTextField lname1;
     private javax.swing.JPasswordField password;
