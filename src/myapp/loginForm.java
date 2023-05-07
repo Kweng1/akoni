@@ -59,7 +59,7 @@ public class loginForm extends javax.swing.JFrame {
     void buttonDefaultColor(JPanel panel){
         panel.setBackground(defbutton);
         panel.setBorder(empty);
-    }
+    }   
 
     
     @SuppressWarnings("unchecked")

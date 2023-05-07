@@ -347,7 +347,7 @@ public class registerform extends javax.swing.JFrame {
       String mail = email.getText();
         String uname = username.getText();
         String pass = String.valueOf(password.getPassword());
-        String cpass = String.valueOf(confirm.getPassword());
+        String cpass = confirm.getText();
         
         if (uname.equals(""))
         {
@@ -367,7 +367,7 @@ public class registerform extends javax.swing.JFrame {
         else{
         PreparedStatement ps;
 ResultSet rs;
-String registerUserQuery = "INSERT INTO `user_db`(`f_name`, `l_name`, `email`, `user_name`, `pass_word`, `con_pass`) VALUES (?,?,?,?,?,?)";
+String registerUserQuery = "INSERT INTO `user_db`(`f_name`, `l_name`, `email`, `user_name`, `pass_word`) VALUES (?,?,?,?,?)";
 
 try {
     ps = login_db.getConnection().prepareStatement(registerUserQuery);
@@ -376,7 +376,7 @@ try {
     ps.setString(3, mail);
     ps.setString(4, uname);
     ps.setString(5, hashPassword(pass));
-    ps.setString(6, hashPassword(cpass));
+ 
     if(ps.executeUpdate() > 0){
         JOptionPane.showMessageDialog(null, "New User Add");
         loginForm lf = new loginForm();
