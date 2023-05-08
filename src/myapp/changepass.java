@@ -48,11 +48,11 @@ public class changepass extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         username = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        newpass = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         cancel = new javax.swing.JButton();
         update = new javax.swing.JButton();
         conpass = new javax.swing.JTextField();
+        newpass = new javax.swing.JPasswordField();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -94,17 +94,13 @@ public class changepass extends javax.swing.JFrame {
 
         username.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         username.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 270, 30));
+        jPanel3.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, 270, 30));
 
         jLabel1.setBackground(new java.awt.Color(0, 121, 111));
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(217, 222, 135));
         jLabel1.setText("Confirm Password:");
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 170, 30));
-
-        newpass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        newpass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.add(newpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 270, 30));
 
         jLabel3.setBackground(new java.awt.Color(0, 121, 111));
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -139,6 +135,7 @@ public class changepass extends javax.swing.JFrame {
             }
         });
         jPanel3.add(conpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 270, 30));
+        jPanel3.add(newpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 260, 30));
 
         jPanel1.add(jPanel3);
         jPanel3.setBounds(240, 80, 520, 330);
@@ -169,20 +166,32 @@ public class changepass extends javax.swing.JFrame {
     }//GEN-LAST:event_cancelActionPerformed
 
     private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
-      String usename,oldpassword,confirmpassword;
+     String usename,oldpassword,confirmpassword;
       usename = username.getText();    
-      String newpassword = newpass.getText();
+      String newpassword = String.valueOf(newpass.getPassword());
       confirmpassword = conpass.getText();
       
+      if (usename.equals(""))
+        {
+            JOptionPane.showMessageDialog(null, "All Fields Are Required!");
+        }else if (newpassword.equals(""))
+        {
+            JOptionPane.showMessageDialog(null, "Add a password");
+        }else if (!newpassword.equals(confirmpassword))
+        {
+            JOptionPane.showMessageDialog(null, "Password Don't Match");
+        }else{
+            PreparedStatement ps ;
+ResultSet rs;
+String changeQuery = ("UPDATE user_db set pass_word = '"+newpassword+"'where user_name = '"+usename+"'");
+
+             try{
+                 ps = login_db.getConnection().prepareStatement(changeQuery);
+                              
+           hashPassword(newpassword);
+          if(ps.executeUpdate() > 0){
       
-      try{
-           Class.forName("com.mysql.jdbc.Driver");
-          Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/delivery","root","");
-          Statement st = con.createStatement();
-          ResultSet rs = st.executeQuery("Select *from user_db where user_name ='"+usename+"'");
           
-          if(rs.next()){
-              st.executeUpdate("update user_db set pass_word = '"+newpassword+"' where user_name = '"+usename+"'");
               JOptionPane.showMessageDialog(null,"Password Changed Successfully");
               loginForm lf = new loginForm();
         this.dispose();
@@ -193,11 +202,12 @@ public class changepass extends javax.swing.JFrame {
       }
      catch (SQLException ex) {
     Logger.getLogger(registerform.class.getName()).log(Level.SEVERE, null, ex);
-} catch (ClassNotFoundException ex) {
-            Logger.getLogger(changepass.class.getName()).log(Level.SEVERE, null, ex);
+}  catch (NoSuchAlgorithmException ex) {      
+             Logger.getLogger(changepass.class.getName()).log(Level.SEVERE, null, ex);
+         }      
         }
- 
       
+     
     }//GEN-LAST:event_updateActionPerformed
 
     private void conpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conpassActionPerformed
@@ -250,7 +260,7 @@ public class changepass extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JTextField newpass;
+    private javax.swing.JPasswordField newpass;
     private javax.swing.JButton update;
     private javax.swing.JTextField username;
     // End of variables declaration//GEN-END:variables
