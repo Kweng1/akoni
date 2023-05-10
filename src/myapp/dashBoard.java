@@ -7,6 +7,9 @@ package myapp;
  */
 import java.awt.Color;
 import internalPages.*;
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 
 
 public class dashBoard extends javax.swing.JFrame {
@@ -42,10 +45,18 @@ public class dashBoard extends javax.swing.JFrame {
         userni = new javax.swing.JLabel();
         DASHBOARD = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
+        ACC = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
         header = new javax.swing.JPanel();
         minimize = new javax.swing.JLabel();
         close = new javax.swing.JLabel();
-        maindesktop = new javax.swing.JDesktopPane();
+        ImageIcon icon = new ImageIcon(getClass().getResource("2ROAD.avif"));
+        Image img = icon.getImage();
+        maindesktop = new javax.swing.JDesktopPane(){
+            public void paintComponent(Graphics g){
+                g.drawImage(img,0,0,getWidth(), getHeight(),this);
+            }
+        };
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -172,6 +183,26 @@ public class dashBoard extends javax.swing.JFrame {
         );
 
         navbar.add(DASHBOARD, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 180, 40));
+
+        ACC.setBackground(new java.awt.Color(217, 222, 135));
+
+        jLabel10.setBackground(new java.awt.Color(217, 222, 135));
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/icons8-settings-64 (1).png"))); // NOI18N
+        jLabel10.setText("ACCOUNT SETTINGS");
+
+        javax.swing.GroupLayout ACCLayout = new javax.swing.GroupLayout(ACC);
+        ACC.setLayout(ACCLayout);
+        ACCLayout.setHorizontalGroup(
+            ACCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        ACCLayout.setVerticalGroup(
+            ACCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        navbar.add(ACC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 180, 40));
 
         jPanel1.add(navbar);
         navbar.setBounds(0, 0, 180, 470);
@@ -330,6 +361,7 @@ public class dashBoard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel ACC;
     private javax.swing.JPanel DASHBOARD;
     private javax.swing.JLabel close;
     private javax.swing.JPanel customer_report;
@@ -338,6 +370,7 @@ public class dashBoard extends javax.swing.JFrame {
     private javax.swing.JPanel deliveryrinfo;
     private javax.swing.JPanel header;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

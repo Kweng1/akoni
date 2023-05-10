@@ -94,7 +94,7 @@ public class changepass extends javax.swing.JFrame {
 
         username.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         username.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, 270, 30));
+        jPanel3.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 260, 30));
 
         jLabel1.setBackground(new java.awt.Color(0, 121, 111));
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -134,7 +134,13 @@ public class changepass extends javax.swing.JFrame {
                 conpassActionPerformed(evt);
             }
         });
-        jPanel3.add(conpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 270, 30));
+        jPanel3.add(conpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 260, 30));
+
+        newpass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                newpassActionPerformed(evt);
+            }
+        });
         jPanel3.add(newpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 260, 30));
 
         jPanel1.add(jPanel3);
@@ -213,6 +219,10 @@ String changeQuery = ("UPDATE user_db set pass_word = '"+newpassword+"'where use
     private void conpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_conpassActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_conpassActionPerformed
+
+    private void newpassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newpassActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_newpassActionPerformed
 
     /**
      * @param args the command line arguments
