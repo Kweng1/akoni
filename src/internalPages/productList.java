@@ -44,7 +44,8 @@ public class productList extends javax.swing.JInternalFrame {
         try{
        
             dbconnector dbc = new dbconnector();
-            ResultSet rs = dbc.getData("SELECT * FROM product_tbl");
+            ResultSet rs = dbc.getData("SELECT p_id as 'Product ID', p_name as 'Product Name', p_small as 'Small', p_medium as 'Medium', p_large as 'Large' FROM product_tbl");
+           
             pr_table.setModel(DbUtils.resultSetToTableModel(rs));
        
         }catch(SQLException ex){
@@ -137,7 +138,8 @@ public class productList extends javax.swing.JInternalFrame {
 
         jPanel1.add(update, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, 80, 30));
 
-        pr_table.setBackground(new java.awt.Color(0, 204, 204));
+        pr_table.setBackground(new java.awt.Color(255, 230, 204));
+        pr_table.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         pr_table.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pr_tableMouseClicked(evt);
@@ -145,7 +147,7 @@ public class productList extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(pr_table);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 330, 320));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 70, 360, 320));
 
         delete.setBackground(new java.awt.Color(222, 140, 135));
         delete.addMouseListener(new java.awt.event.MouseAdapter() {

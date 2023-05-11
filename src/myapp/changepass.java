@@ -136,6 +136,7 @@ public class changepass extends javax.swing.JFrame {
         });
         jPanel3.add(conpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 260, 30));
 
+        newpass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         newpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 newpassActionPerformed(evt);

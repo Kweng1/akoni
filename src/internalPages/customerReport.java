@@ -44,7 +44,7 @@ public class customerReport extends javax.swing.JInternalFrame {
         try{
        
             dbconnector dbc = new dbconnector();
-            ResultSet rs = dbc.getData("SELECT * FROM customer_tbl");
+            ResultSet rs = dbc.getData("SELECT c_id as 'ID', c_name as 'Name', c_add as 'Address', c_order as 'Order', c_size as 'Size', c_quant as 'Quantity', c_price as 'Price', c_tp as 'Total Price' FROM customer_tbl");
             customer_tbl.setModel(DbUtils.resultSetToTableModel(rs));
        
         }catch(SQLException ex){
@@ -171,7 +171,8 @@ public class customerReport extends javax.swing.JInternalFrame {
 
         jPanel1.add(search, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 40, 80, 30));
 
-        customer_tbl.setBackground(new java.awt.Color(0, 204, 204));
+        customer_tbl.setBackground(new java.awt.Color(255, 230, 204));
+        customer_tbl.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         customer_tbl.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 customer_tblMouseClicked(evt);
@@ -501,12 +502,12 @@ public class customerReport extends javax.swing.JInternalFrame {
           cid.setText(""+model.getValueAt(rowIndex, 0));
           cname.setText(""+model.getValueAt(rowIndex, 1));
           cadd.setText(""+model.getValueAt(rowIndex, 2));
-          ccon.setText(""+model.getValueAt(rowIndex, 3));
-           corder.setText(""+model.getValueAt(rowIndex, 4));
-           size.setText(""+model.getValueAt(rowIndex, 5));
-           cquant.setText(""+model.getValueAt(rowIndex, 6));
-           cprice.setText(""+model.getValueAt(rowIndex, 7));
-           ctp.setText(""+model.getValueAt(rowIndex, 8));
+          
+           corder.setText(""+model.getValueAt(rowIndex, 3));
+           size.setText(""+model.getValueAt(rowIndex, 4));
+           cquant.setText(""+model.getValueAt(rowIndex, 5));
+           cprice.setText(""+model.getValueAt(rowIndex, 6));
+           ctp.setText(""+model.getValueAt(rowIndex, 7));
          
           
           

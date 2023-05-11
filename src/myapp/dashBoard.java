@@ -185,6 +185,17 @@ public class dashBoard extends javax.swing.JFrame {
         navbar.add(DASHBOARD, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 180, 40));
 
         ACC.setBackground(new java.awt.Color(217, 222, 135));
+        ACC.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ACCMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                ACCMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                ACCMouseExited(evt);
+            }
+        });
 
         jLabel10.setBackground(new java.awt.Color(217, 222, 135));
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
@@ -324,6 +335,19 @@ public class dashBoard extends javax.swing.JFrame {
       
     
     }//GEN-LAST:event_DASHBOARDMouseClicked
+
+    private void ACCMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ACCMouseClicked
+      account ac = new   account();
+     maindesktop.add(ac).setVisible(true);
+    }//GEN-LAST:event_ACCMouseClicked
+
+    private void ACCMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ACCMouseEntered
+        ACC.setBackground(body);
+    }//GEN-LAST:event_ACCMouseEntered
+
+    private void ACCMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ACCMouseExited
+       ACC.setBackground(navcolor);
+    }//GEN-LAST:event_ACCMouseExited
 
     /**
      * @param args the command line arguments

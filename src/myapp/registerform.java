@@ -7,6 +7,7 @@ package myapp;
 
 import config.dbconnector;
 import config.login_db;
+import internalPages.account;
 import java.awt.Color;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -382,6 +383,10 @@ try {
         loginForm lf = new loginForm();
         this.dispose();
         lf.setVisible(true);
+       
+        account acc = new account();
+        
+        acc.namel.setText(lname);
     }else{
         JOptionPane.showMessageDialog(null, "Error: Check Your Information");
     }
