@@ -33,6 +33,7 @@ public class orderinfo extends javax.swing.JInternalFrame {
      */
     public orderinfo() {
         initComponents();
+        displayData();
         
          this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI bi = (BasicInternalFrameUI)this.getUI();
@@ -44,8 +45,8 @@ public class orderinfo extends javax.swing.JInternalFrame {
         try{
        
             dbconnector dbc = new dbconnector();
-            ResultSet rs = dbc.getData("SELECT customer_tbl.c_id,"
-                    + "customer_tbl.c_name,product_tbl.p_name"
+            ResultSet rs = dbc.getData("SELECT customer_tbl.c_id as 'Customer ID',"
+                    + "customer_tbl.c_name as 'Customer Name' ,product_tbl.p_name as 'Product Name'"
                     + " FROM customer_order LEFT JOIN customer_tbl ON \n" +
                      "customer_order.c_id = customer_tbl.c_id "
                     + "LEFT JOIN product_tbl ON customer_order.p_id = product_tbl.p_id");

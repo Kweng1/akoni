@@ -3,6 +3,7 @@ package myapp;
 
 
 import config.login_db;
+import internalPages.account;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.security.MessageDigest;
@@ -378,6 +379,10 @@ try {
 
        db.userni.setText("Welcome "+user+ "!");
        
+       account acc = new account();
+      
+       
+       acc.namel3.setText(user);
        this.dispose();
 
     }

@@ -5,7 +5,13 @@
  */
 package internalPages;
 
+import config.dbconnector;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.naming.spi.DirStateFactory.Result;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
+import javax.swing.table.TableModel;
+import net.proteanit.sql.DbUtils;
 
 /**
  *
@@ -18,10 +24,22 @@ public class account extends javax.swing.JInternalFrame {
      */
     public account() {
         initComponents();
+        displayData();
         
         this.setBorder(javax.swing.BorderFactory.createEmptyBorder(0,0,0,0));
         BasicInternalFrameUI bi = (BasicInternalFrameUI)this.getUI();
         bi.setNorthPane(null);
+    } 
+    public void displayData(){
+         try {
+              dbconnector dbc = new dbconnector();
+              ResultSet rs = dbc.getData("SELECT f_name as 'First Name', l_name as 'Last Name', email as 'Email', user_name as 'Username' FROM `user_db` ");
+              acc_tbl.setModel(DbUtils.resultSetToTableModel( rs));
+         }
+         catch(SQLException ex){
+            System.out.println("Error Message: "+ex);
+       
+        }
     }
 
     /**
@@ -54,7 +72,7 @@ public class account extends javax.swing.JInternalFrame {
         namel3 = new javax.swing.JLabel();
         namel4 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        acc_tbl = new javax.swing.JTable();
 
         jPanel1.setBackground(new java.awt.Color(222, 184, 135));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -63,7 +81,12 @@ public class account extends javax.swing.JInternalFrame {
 
         jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("EDIT PROFILE");
+        jLabel10.setText("DISPLAY DATA");
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -123,14 +146,14 @@ public class account extends javax.swing.JInternalFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+            .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
         );
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, 110, -1));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 110, 100, -1));
 
         namel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel2.add(namel, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 130, 20));
@@ -149,10 +172,15 @@ public class account extends javax.swing.JInternalFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 160));
 
-        jTable2.setBackground(new java.awt.Color(255, 230, 204));
-        jTable2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jTable2.setGridColor(new java.awt.Color(255, 153, 153));
-        jScrollPane2.setViewportView(jTable2);
+        acc_tbl.setBackground(new java.awt.Color(255, 230, 204));
+        acc_tbl.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        acc_tbl.setGridColor(new java.awt.Color(255, 153, 153));
+        acc_tbl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                acc_tblMouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(acc_tbl);
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 680, 200));
 
@@ -170,8 +198,18 @@ public class account extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void acc_tblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_acc_tblMouseClicked
+  
+       
+    }//GEN-LAST:event_acc_tblMouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+  
+    }//GEN-LAST:event_jLabel10MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable acc_tbl;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -188,11 +226,14 @@ public class account extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTable jTable2;
     public static javax.swing.JLabel namel;
     public static javax.swing.JLabel namel1;
     public static javax.swing.JLabel namel2;
     public static javax.swing.JLabel namel3;
     public static javax.swing.JLabel namel4;
     // End of variables declaration//GEN-END:variables
+
+    public void setLocationRelativeTo(Object object) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

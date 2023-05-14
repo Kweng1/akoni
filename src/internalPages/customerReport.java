@@ -180,7 +180,7 @@ public class customerReport extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(customer_tbl);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 450, 150));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 460, 150));
 
         delete.setBackground(new java.awt.Color(222, 140, 135));
         delete.addMouseListener(new java.awt.event.MouseAdapter() {

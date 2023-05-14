@@ -136,6 +136,7 @@ public class changepass extends javax.swing.JFrame {
         });
         jPanel3.add(conpass, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 260, 30));
 
+        newpass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         newpass.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         newpass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -190,12 +191,13 @@ public class changepass extends javax.swing.JFrame {
         }else{
             PreparedStatement ps ;
 ResultSet rs;
-String changeQuery = ("UPDATE user_db set pass_word = '"+newpassword+"'where user_name = '"+usename+"'");
+String changeQuery = ("UPDATE user_db SET pass_word = ? where user_name = '"+usename+"'");
 
              try{
                  ps = login_db.getConnection().prepareStatement(changeQuery);
-                              
-           hashPassword(newpassword);
+                ps.setString(1, hashPassword(newpassword));
+                ps.executeUpdate();
+         
           if(ps.executeUpdate() > 0){
       
           

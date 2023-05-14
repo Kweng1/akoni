@@ -9,6 +9,8 @@ import config.dbconnector;
 import config.login_db;
 import internalPages.account;
 import java.awt.Color;
+import java.awt.Image;
+import java.io.File;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.PreparedStatement;
@@ -16,6 +18,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
 /**
@@ -23,6 +27,9 @@ import javax.swing.JOptionPane;
  * @author admin
  */
 public class registerform extends javax.swing.JFrame {
+    String gender;
+    String filename= null;
+    byte[] person_image = null;
 
     
     public registerform() {
@@ -81,6 +88,8 @@ public class registerform extends javax.swing.JFrame {
         create = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        lbl_img = new javax.swing.JLabel();
+        btnImage = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -301,7 +310,20 @@ public class registerform extends javax.swing.JFrame {
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/1laptop-removebg-preview (1).png"))); // NOI18N
         jPanel1.add(jLabel7);
-        jLabel7.setBounds(580, 90, 350, 350);
+        jLabel7.setBounds(580, 200, 350, 260);
+
+        lbl_img.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.add(lbl_img);
+        lbl_img.setBounds(730, 70, 110, 110);
+
+        btnImage.setText("BROWSE");
+        btnImage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImageActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnImage);
+        btnImage.setBounds(730, 190, 110, 23);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -377,6 +399,8 @@ try {
     ps.setString(3, mail);
     ps.setString(4, uname);
     ps.setString(5, hashPassword(pass));
+    
+   
  
     if(ps.executeUpdate() > 0){
         JOptionPane.showMessageDialog(null, "New User Add");
@@ -384,9 +408,7 @@ try {
         this.dispose();
         lf.setVisible(true);
        
-        account acc = new account();
-        
-        acc.namel.setText(lname);
+      
     }else{
         JOptionPane.showMessageDialog(null, "Error: Check Your Information");
     }
@@ -404,6 +426,23 @@ try {
        lf.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_cancelActionPerformed
+
+    private void btnImageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImageActionPerformed
+       JFileChooser chooser = new JFileChooser();
+       chooser.showOpenDialog(null);
+       File f =chooser.getSelectedFile();
+       filename = f.getAbsolutePath();
+       ImageIcon imageIcon = new ImageIcon(new ImageIcon(filename).getImage().getScaledInstance(lbl_img.getWidth(),lbl_img.getHeight(), Image.SCALE_SMOOTH));
+       lbl_img.setIcon(imageIcon);
+       
+       try{
+           File image = new File (filename);
+           
+       }
+       catch(Exception e){
+           JOptionPane.showMessageDialog(null,e);
+       }
+    }//GEN-LAST:event_btnImageActionPerformed
 
      public boolean  checkUsername(String username)
     {
@@ -462,6 +501,7 @@ try {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnImage;
     private javax.swing.JButton cancel;
     private javax.swing.JPanel cancel1;
     private javax.swing.JPasswordField confirm;
@@ -495,6 +535,7 @@ try {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JTextField lastname;
+    private javax.swing.JLabel lbl_img;
     private javax.swing.JTextField lname1;
     private javax.swing.JPasswordField password;
     private javax.swing.JTextField time2;

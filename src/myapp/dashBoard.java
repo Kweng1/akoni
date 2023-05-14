@@ -153,7 +153,7 @@ public class dashBoard extends javax.swing.JFrame {
         userni.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         userni.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         userni.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        navbar.add(userni, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 180, 20));
+        navbar.add(userni, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 180, 30));
 
         DASHBOARD.setBackground(new java.awt.Color(217, 222, 135));
         DASHBOARD.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -250,19 +250,19 @@ public class dashBoard extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("APP");
         maindesktop.add(jLabel1);
-        jLabel1.setBounds(0, 220, 770, 50);
+        jLabel1.setBounds(0, 300, 720, 50);
 
         jLabel5.setFont(new java.awt.Font("Engravers MT", 1, 48)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("DELIVery");
         maindesktop.add(jLabel5);
-        jLabel5.setBounds(10, 120, 730, 50);
+        jLabel5.setBounds(10, 190, 720, 50);
 
         jLabel7.setFont(new java.awt.Font("Engravers MT", 1, 36)); // NOI18N
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("TRACKER");
         maindesktop.add(jLabel7);
-        jLabel7.setBounds(0, 170, 770, 50);
+        jLabel7.setBounds(0, 250, 720, 50);
 
         jPanel1.add(maindesktop);
         maindesktop.setBounds(180, 40, 730, 430);
